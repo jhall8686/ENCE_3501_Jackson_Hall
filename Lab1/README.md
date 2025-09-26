@@ -43,4 +43,36 @@ The schematic must simply be a series of the voltage dividers, but with an addit
 
 <img width="459" height="767" alt="image" src="https://github.com/user-attachments/assets/7cdf2f13-7605-4796-a174-5d74119aea8d" />
 
+Running the following Spice code:
+
+<img width="932" height="738" alt="image" src="https://github.com/user-attachments/assets/373e266c-5977-4efc-8284-109f91761223" />
+
+Outputs the expected voltage values.
+
+### Icon
+
+The icon is created in a similar way to the previous one. 
+
+<img width="329" height="203" alt="image" src="https://github.com/user-attachments/assets/bf362012-b64d-4334-b3b8-b57349aff45f" />
+
+### Simulation Tests
+
+The first is an operating point test with b1 and b0 connected to 5V. 
+
+<img width="1256" height="523" alt="image" src="https://github.com/user-attachments/assets/243f0f04-9956-4720-90bf-3a970f5f49a1" />
+
+The output is as expected: (2.5 + 1.25) ~ (b1 + b0).
+
+The second is a transient analysis.
+
+*WIP*
+
+### Layout
+
+The layout can be constructed simply from multiple copies of the voltage divider layout, again with the additional 10kΩ resistor. After adding nodes with the same exports as the nodes in the schematic, you get:
+
+<img width="500" height="699" alt="image" src="https://github.com/user-attachments/assets/74ed8216-872a-4d3e-ae88-181c707707f4" />
+
+The gnd export does not exist on the schematic, but it will come in handy for [Lab 2](https://github.com/jhall8686/ENCE_3501_Jackson_Hall/tree/main/Lab2) when connecting with the padframe.
+
 
