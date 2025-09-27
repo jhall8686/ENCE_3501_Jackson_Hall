@@ -55,17 +55,32 @@ The icon is created in a similar way to the previous one.
 
 <img width="329" height="203" alt="image" src="https://github.com/user-attachments/assets/bf362012-b64d-4334-b3b8-b57349aff45f" />
 
+### Output Resistance
+
+The output resistance can be found by turning all of the sources off and analyzing around the output point-- the R-2R ladder simplifies to a single resistance R, or 10k. 
+
 ### Simulation Tests
 
-The first is an operating point test with b1 and b0 connected to 5V. 
+The first is an operating point test with b1 and b0 connected to 5V.
 
-<img width="1256" height="523" alt="image" src="https://github.com/user-attachments/assets/243f0f04-9956-4720-90bf-3a970f5f49a1" />
+<img width="853" height="580" alt="image" src="https://github.com/user-attachments/assets/0c46f1f2-3886-42f9-a125-93ec88e78eeb" />
 
-The output is as expected: (2.5 + 1.25) ~ (b1 + b0).
+When this spice code is run, the output is given as
+
+<img width="518" height="103" alt="image" src="https://github.com/user-attachments/assets/3daa05e7-3e66-41d9-bb6a-124ca3b0f107" />
+
+Which matches the voltage values from above, so the icon functions as expected.
 
 The second is a transient analysis.
 
-*WIP*
+<img width="1208" height="531" alt="image" src="https://github.com/user-attachments/assets/086f575c-2169-48b7-8c69-1853ebfb24b3" />
+
+---
+The time constant τ = RC, and in this case, the DAC functions as a 10k-10k voltage divider. that means that the steady-state output voltage $v_{ss}$ is 1 V, and the circuit is equivalent to a parallel RC charging circuit with a 1V source, a 10k resistor, and the 10pF capacitor. So, the time constant $\tau = RC = (10k)(10p) = 100ns$. When the Spice code above is run, the following results can be seen:
+
+<img width="918" height="420" alt="Screenshot 2025-09-27 160937" src="https://github.com/user-attachments/assets/9006f489-6479-49f3-888e-9e0570674624" />
+
+By definition, the system should reach 63.2% of $v_\infty$ at $1\tau$-- the voltage sits at ~0.632 V at 100ns.
 
 ### Layout
 
@@ -74,5 +89,6 @@ The layout can be constructed simply from multiple copies of the voltage divider
 <img width="500" height="699" alt="image" src="https://github.com/user-attachments/assets/74ed8216-872a-4d3e-ae88-181c707707f4" />
 
 The gnd export does not exist on the schematic, but it will come in handy for [Lab 2](https://github.com/jhall8686/ENCE_3501_Jackson_Hall/tree/main/Lab2) when connecting with the padframe.
+
 
 
