@@ -71,7 +71,17 @@ When this spice code is run, the output is given as
 
 Which matches the voltage values from above, so the icon functions as expected.
 
-The second is a transient analysis.
+The second adds a 10k resistor as a load to the circuit:
+
+<img width="782" height="512" alt="image" src="https://github.com/user-attachments/assets/a5bc2094-f57d-4f74-968d-499a1bb05887" />
+
+When the Spice code is run:
+
+<img width="694" height="101" alt="image" src="https://github.com/user-attachments/assets/d2239cbf-0588-447d-b3ae-bb7e41bf7d04" />
+
+The operating point value at vout is significantly smaller, meaning that a resistive load changes the output of the voltage divider.
+
+The third is a transient analysis.
 
 <img width="1208" height="531" alt="image" src="https://github.com/user-attachments/assets/086f575c-2169-48b7-8c69-1853ebfb24b3" />
 
