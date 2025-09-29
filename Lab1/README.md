@@ -98,7 +98,7 @@ The layout can be constructed simply from multiple copies of the voltage divider
 
 <img width="500" height="699" alt="image" src="https://github.com/user-attachments/assets/74ed8216-872a-4d3e-ae88-181c707707f4" />
 
-The gnd export does not exist on the schematic, but it will come in handy for [Lab 2](https://github.com/jhall8686/ENCE_3501_Jackson_Hall/tree/main/Lab2) when connecting with the padframe.
+The gnd export does not exist on the schematic, but it will come in handy for [Lab 2](https://github.com/jhall8686/ENCE_3501_Jackson_Hall/tree/main/Lab2/README.md) when connecting with the padframe.
 
 
 
